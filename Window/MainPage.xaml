@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Window.MainPage"
+             xmlns:local="clr-namespace:GG;assembly=GG"
+             >
+
+    <ContentPage.BindingContext>
+        
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Button
+                Text="Create a Character"
+                Clicked="OnCreateCharacterClicked" />
+            <Button
+                Text="Open World"
+                Clicked="OnOpenWorldClicked" />
+            <Button
+                Text="Close"
+                Clicked="OnCloseClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

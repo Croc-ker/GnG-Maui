@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Window.World"
+             Title="World">
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+
+        <Button
+            Clicked="OpenDialogue" />
+        <Button
+            Text="Go Back"
+            Clicked="OnGoBackClicked" />
+        <Button
+            Text="Talk to the Merchant"
+            Clicked="talkMerchant" />
+    </VerticalStackLayout>
+</ContentPage>
