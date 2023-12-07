@@ -12,8 +12,8 @@ namespace GG.Logic
         public Class Class;
         public Player(PlayerViewModel pvm)
         {
-            this.name = pvm.Name;
-            Class = new Class(pvm.ClassName);
+            this.name = pvm.NameP;
+            Class = new Class(pvm.ClassNameP);
             this.health = 10 + Class.Con;
             this.damage = 1 + Class.Str;
         }

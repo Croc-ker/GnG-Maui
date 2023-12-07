@@ -33,11 +33,13 @@ public partial class Dialogue : ContentPage
 		switch (stage)
 		{
 			case 1:
+				mood.Source = "scrimblohappy.png";
 				npc.Dialogue.BranchOne = npc.Dialogue.Branches[2];
 				npc.Dialogue.BranchTwo = npc.Dialogue.Branches[3];
 				stage++;
 				break;
 			case 2:
+				mood.Source = "scrimblohappy.png";
 				npc.Dialogue.BranchOne = npc.Dialogue.Branches[6];
 				npc.Dialogue.BranchTwo = npc.Dialogue.Branches[6];
 				stage++;
@@ -55,11 +57,13 @@ public partial class Dialogue : ContentPage
 		switch (stage)
 		{
             case 1:
+                mood.Source = "scrimbloanger.png";
                 npc.Dialogue.BranchOne = npc.Dialogue.Branches[4];
                 npc.Dialogue.BranchTwo = npc.Dialogue.Branches[5];
 				stage++;
                 break;
             case 2:
+				mood.Source = "scrimbloanger.png";
                 npc.Dialogue.BranchOne = npc.Dialogue.Branches[6];
                 npc.Dialogue.BranchTwo = npc.Dialogue.Branches[6];
 				stage++;

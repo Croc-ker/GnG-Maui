@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Window.World3"
+             Title="World3">
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+
+        <Image
+            Source="interior.jpg"
+            HeightRequest="200"
+            HorizontalOptions="Center" 
+            x:Name="worldimg"/>
+        <Label
+            Text="youre in the castle now. this is exciting, i think."
+            FontSize="Title" />
+        <Label Text="ok you layed down and died. very cool. game over or something idk figure it out dumbass" 
+               IsVisible="false"
+               x:Name="dietext"
+               />
+        <Label
+            Text="What would you like to do?" />
+        <Button
+            Text="lay down and will yourself to rot to death"
+            Clicked="die" 
+            x:Name="rot"/>
+        <Button
+            Text="Go Back"
+            Clicked="OnGoBackClicked" />
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Window.World2"
+             Title="World2">
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+
+        <Image
+            Source="castle.jpg"
+            HeightRequest="200"
+            HorizontalOptions="Center" />
+        <Label
+            Text="After leaving the foul-smelling weirdo, you venture forth and find yourself in front of a castle (wow)"
+            FontSize="Title" />
+        <Label
+            Text="What would you like to do?" />
+        <Button
+            Text="Go inside"
+            Clicked="goInside" />
+        <Button
+            Text="Go Back"
+            Clicked="OnGoBackClicked" />
+
+    </VerticalStackLayout>
+</ContentPage>

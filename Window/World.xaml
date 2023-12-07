@@ -7,13 +7,30 @@
         Padding="30,0"
         Spacing="25">
 
+        <Image
+            Source="world01.png"
+            HeightRequest="200"
+            HorizontalOptions="Center" />
+        <Label
+            Text="You are in the World. Before you is a man, standing by himself against a crumbling stone wall."
+            FontSize="Title" />
+        <Label
+            Text="What would you like to do?" />
         <Button
-            Clicked="OpenDialogue" />
+            Text="Talk to the Merchant"
+            Clicked="talkMerchant"
+            x:Name="talkmerch"/>
+        <Button
+            Text="Fight the Merchant"
+            Clicked="fightMerchant"
+            x:Name="fightmerch"/>
+        <Button
+            Text="Go forth"
+            Clicked="goForth" 
+            x:Name="goforth"
+            IsVisible="false"/>
         <Button
             Text="Go Back"
             Clicked="OnGoBackClicked" />
-        <Button
-            Text="Talk to the Merchant"
-            Clicked="talkMerchant" />
     </VerticalStackLayout>
 </ContentPage>

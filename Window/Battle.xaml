@@ -2,8 +2,36 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Window.Battle"
-             Title="Battle">
-    <VerticalStackLayout>
+             Title="Battle"
+             xmlns:viewmodel="clr-namespace:GG.UI;assembly=GG"
+             x:DataType="viewmodel:NonPlayerViewModel">
+    <VerticalStackLayout
+        Padding="10"
+        Spacing="10">
+        <Label Text="{Binding Name}" />
+        <Label Text="{Binding Health,StringFormat='HP: {0}'}" />
+        <Label Text="{Binding Damage,StringFormat='Damage: {0}'}" />
+
+
+        <Label 
+            Text="You encountered an enemy!"
+            x:Name="desc"            
+            />
+        <HorizontalStackLayout>
+            <Button Text="Attack" Clicked="Attack" />
+            <Button Text="Defend" Clicked="Defend" />
+            <Button Text="Magic" Clicked="Magic" />
+            <Button Text="Flee" Clicked="Flee" />
+        </HorizontalStackLayout>
         
+        <VerticalStackLayout
+            x:Name="pl"
+            xmlns:viewmodel="clr-namespace:GG.UI;assembly=GG"
+            x:DataType="viewmodel:PlayerViewModel">
+            <Label Text="{Binding NameP}" />
+            <Label Text="{Binding HealthP,StringFormat='HP: {0}'}" />
+            <Label Text="{Binding DamageP,StringFormat='Damage: {0}'}" />
+        </VerticalStackLayout>
     </VerticalStackLayout>
+
 </ContentPage>

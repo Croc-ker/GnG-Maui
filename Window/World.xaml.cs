@@ -53,12 +53,23 @@ public partial class World : ContentPage
         Navigation.PopAsync();
     }
 
-    private void OpenDialogue(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new Dialogue(Globals.merchant));
-    }
     private void talkMerchant(object sender, EventArgs e)
     {
+        goforth.IsVisible = true;
+        talkmerch.IsVisible = false;
         Navigation.PushAsync(new Dialogue(Globals.merchant));
+    }
+
+    private void fightMerchant(object sender, EventArgs e)
+    {
+        goforth.IsVisible = true;
+        talkmerch.IsVisible = false;
+        fightmerch.IsVisible = false;
+        Navigation.PushAsync(new Battle(new Entity(Globals.merchant)));
+    }
+
+    private void goForth(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new World2());
     }
 }

@@ -24,7 +24,9 @@ namespace GG.UI
         private string _name;
         [ObservableProperty]
         private Tree dialogue;
-
-
+        [ObservableProperty]
+        private int _damage;
+        [ObservableProperty]
+        private int _health;
     }
 }

@@ -1,10 +1,12 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using GG.Logic;
 
 namespace GG.UI
 {
     public partial class EntityViewModel : ObservableObject
     {
+        Dice dice = new Dice();
         public EntityViewModel()
         {
             Name = "Default";
@@ -26,8 +28,14 @@ namespace GG.UI
             Int = entity.entInt;
             Wis = entity.entWis;
             Cha = entity.entCha;
+            Health = entity.health;
+            Damage = entity.damage;
         }
 
+        [ObservableProperty]
+        private int _health;
+        [ObservableProperty]
+        private int _damage;
         [ObservableProperty]
         private string _name;
         [ObservableProperty]
@@ -44,5 +52,6 @@ namespace GG.UI
         private int _wis;
         [ObservableProperty]
         private int _cha;
+
     }
 }

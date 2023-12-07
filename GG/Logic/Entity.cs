@@ -23,6 +23,24 @@ namespace GG.Logic
                 entWis = classType.Wis;
                 entCha = classType.Cha;
             }
+            else
+            {
+                classType = new Class("Being");
+                randStats();
+            }
+        }
+        public Entity(NonPlayer np)
+        {
+            name = np.name;
+            health = np.health;
+            damage = np.damage;
+            classType = np.classType;
+            entStr = np.entStr;
+            entDex = np.entDex;
+            entCon = np.entCon;
+            entInt = np.entInt;
+            entWis = np.entWis;
+            entCha = np.entCha;
         }
         public Entity()
         {
@@ -44,7 +62,7 @@ namespace GG.Logic
         public int entWis = 10;
         public int entCha = 10;
 
-        private void randStats()
+        public void randStats()
         {
             Dice dice = new Dice();
             entStr = dice.Roll(8, 2);

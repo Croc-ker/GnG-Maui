@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GG.Logic
 {
-    internal class Dice
+    public class Dice
     {
         public int RollD20()
         {

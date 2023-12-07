@@ -117,7 +117,7 @@ namespace GG.Logic
                     wis = 10;
                     cha = 15;
                     break;
-                    case "Warlock":
+                case "Warlock":
                     str = 8;
                     dex = 14;
                     con = 13;
@@ -125,13 +125,21 @@ namespace GG.Logic
                     wis = 10;
                     cha = 15;
                     break;
-                    case "Wizard":
+                case "Wizard":
                     str = 8;
                     dex = 14;
                     con = 10;
                     inte = 15;
                     wis = 13;
                     cha = 12;
+                    break;
+                default:
+                    str = 10;
+                    dex = 10;
+                    con = 10;
+                    inte = 10;
+                    wis = 10;
+                    cha = 10;
                     break;
             }
         }

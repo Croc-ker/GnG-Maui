@@ -10,27 +10,27 @@
         Spacing="25">
         <Entry
             Placeholder="Name"
-            Text="{Binding Name}" />
+            Text="{Binding NameP}" />
         <Picker
             Title="Class"
             ItemsSource="{Binding Classes }"
             SelectedItem="{Binding SetClassName }" />
         <Label
-            Text="{Binding Name,StringFormat='Name: {0}'}" />
+            Text="{Binding NameP,StringFormat='Name: {0}'}" />
         <Label
-            Text="{Binding ClassName,StringFormat='Class: {0}'}" />
+            Text="{Binding ClassNameP,StringFormat='Class: {0}'}" />
         <Label
-            Text="{Binding Str,StringFormat='Strength: {0}'}" />
+            Text="{Binding StrP,StringFormat='Strength: {0}'}" />
         <Label
-            Text="{Binding Dex,StringFormat='Dexterity: {0}'}" />
+            Text="{Binding DexP,StringFormat='Dexterity: {0}'}" />
         <Label
-            Text="{Binding Con,StringFormat='Constitution: {0}'}" />
+            Text="{Binding ConP,StringFormat='Constitution: {0}'}" />
         <Label
-            Text="{Binding Int,StringFormat='Intelligence: {0}'}" />
+            Text="{Binding IntP,StringFormat='Intelligence: {0}'}" />
         <Label
-            Text="{Binding Wis,StringFormat='Wisdom: {0}'}" />
+            Text="{Binding WisP,StringFormat='Wisdom: {0}'}" />
         <Label
-            Text="{Binding Cha,StringFormat='Charisma: {0}'}" />
+            Text="{Binding ChaP,StringFormat='Charisma: {0}'}" />
         <Button
             Text="Open World"
             Clicked="OnOpenWorldClicked" />
