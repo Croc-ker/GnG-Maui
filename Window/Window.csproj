@@ -68,6 +68,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Battle.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="CharacterCreator.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -3,28 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Window.Dialogue"
              Title="Dialogue"
-             xmlns:viewmodel="clr-namespace:GG.Conversation;assembly=GG"
-             x:DataType="viewmodel:Branch"
+             xmlns:viewmodel="clr-namespace:GG.UI;assembly=GG"
+             x:DataType="viewmodel:NonPlayerViewModel"
              >
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            />
-        <Label
-            Text="{Binding CurrentText}"
-            />
-        <ListView x:Name="playerOptionsListView"
-                  ItemsSource="{Binding PlayerText}"
-                  SelectedItem="{Binding SelectedPlayerText, Mode=TwoWay}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Button Text="{Binding}" Command="{Binding Source={x:Reference playerOptionsListView}, Path=BindingContext.SelectOptionCommand}" CommandParameter="{Binding .}" />
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+    <VerticalStackLayout
+        Padding="10"
+        Spacing="10"
+        >
+        <Label Text="{Binding Name}" />
+        <Label Text="{Binding Dialogue.CurrentDialogue}" />
+        <Button Text="{Binding Dialogue.BranchOne.PlayerText}" Clicked="Option1" HorizontalOptions="Fill"/>
+        <Button Text="{Binding Dialogue.BranchTwo.PlayerText}" Clicked="Option2" HorizontalOptions="Fill"/>
     </VerticalStackLayout>
 </ContentPage>

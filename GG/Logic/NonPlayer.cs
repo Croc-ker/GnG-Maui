@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GG.UI
+namespace GG.Logic
 {
-    public class NonPlayer : EntityViewModel
+    public class NonPlayer : Entity
     {
-        public Branch branch;
+        public Tree dialogue;
     }
 }

@@ -11,21 +11,24 @@ namespace GG.Conversation
 {
     public partial class Branch : ObservableObject
     {
-        public Branch(string greetingText)
+        public Branch(string inputPlayerText, string inputResponse, Branch inputNextBranch)
         {
-            playerText = new ObservableCollection<string>();
-            npcText = new ObservableCollection<string>();
-            npcText.Add(greetingText);
-            currentText = greetingText;
+            PlayerText = inputPlayerText;
+            Response = inputResponse;
+            NextBranch = inputNextBranch;
+        }
+        public Branch(string inputPlayerText, string inputResponse)
+        {
+            PlayerText = inputPlayerText;
+            Response = inputResponse;
         }
         [ObservableProperty]
-        private string currentText;
+        private string? playerText;
         [ObservableProperty]
-        private string selectedPlayerText;
+        private string? response;
         [ObservableProperty]
-        ObservableCollection<string> playerText;
-        [ObservableProperty]
-        ObservableCollection<string> npcText;
+        private Branch? nextBranch;
 
+        
     }
 }

@@ -4,10 +4,6 @@
              x:Class="Window.MainPage"
              xmlns:local="clr-namespace:GG;assembly=GG"
              >
-
-    <ContentPage.BindingContext>
-        
-    </ContentPage.BindingContext>
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
